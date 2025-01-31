@@ -1,0 +1,170 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Dancing Script', cursive;  /* Elegant calligraphy font */
+    background: linear-gradient(135deg, #d0eafc, #c6d9e8);  /* Light blue gradient */
+    color: #333333;  /* Soft gray text for readability */
+    text-align: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #a7c9e8;  /* Light blue */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3a79a4;  /* Deep blue */
+    letter-spacing: 2px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #333333;  /* Soft gray text */
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #3a79a4;  /* Deep blue on hover */
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* Section Styles */
+.section-container {
+    padding: 60px 20px;
+    margin: 50px 0;
+    background: #ffffff;  /* Clean white background */
+    border-radius: 15px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.section-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;  /* Calligraphy font for headings */
+    color: #3a79a4;  /* Deep blue */
+    letter-spacing: 1px;
+}
+
+/* Larger title for main sections */
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+/* Smaller sub-headings for section titles */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs and text inside sections */
+section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #777777; /* Softer gray text for better readability */
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Hero Section (Main Welcome Section) */
+#home {
+    background: #f4faff;  /* Very light blue background */
+    padding: 100px 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar .nav-links.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #a7c9e8;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Adjusting text and padding for smaller screens */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
+
+/* Larger Section Container Padding for Wide Screens */
+@media (min-width: 1024px) {
+    .section-container {
+        padding: 80px 30px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    section p {
+        font-size: 1.4rem;
+    }
+}
