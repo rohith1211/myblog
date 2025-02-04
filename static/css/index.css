@@ -218,3 +218,15 @@ section p {
         grid-template-columns: repeat(4, 1fr); /* 4 columns for laptop or larger screens */
     }
 }
+
+/* Style for the footer */
+footer {
+    background-color: #a7c9e8;  /* Dark background */
+    color: #3a79a4; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Padding on top and bottom */
+    font-size: 16px; /* Font size */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
