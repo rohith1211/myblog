@@ -114,6 +114,46 @@ section p {
     transform: translateY(-20px);
 }
 
+/* Container for Cat Items (Grid layout) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default to 2 columns (for mobile) */
+    gap: 20px;
+    margin-bottom: 40px; /* Space between rows */
+    padding: 20px;
+}
+
+.item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item h3 {
+    margin-top: 10px;
+}
+
+.item p {
+    color: #777777; /* Soft gray text for descriptions */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Hover Effect for Item */
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Mobile Styling */
 @media (max-width: 768px) {
     .navbar .nav-links {
@@ -148,6 +188,11 @@ section p {
     section p {
         font-size: 1rem;
     }
+
+    /* Default to 2 columns on smaller screens */
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    }
 }
 
 /* Larger Section Container Padding for Wide Screens */
@@ -166,5 +211,10 @@ section p {
 
     section p {
         font-size: 1.4rem;
+    }
+
+    /* Adjust grid layout for larger screens (laptops and desktops) */
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for laptop or larger screens */
     }
 }

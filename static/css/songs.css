@@ -114,7 +114,96 @@ section p {
     transform: translateY(-20px);
 }
 
-/* Mobile Styling */
+/* Songs Section */
+#songs {
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+#songs h1 {
+    font-size: 3.5rem;
+    color: #3a79a4;  /* Deep blue */
+    margin-bottom: 20px;
+}
+
+#songs p {
+    font-size: 1.2rem;
+    color: #777777;
+    margin-bottom: 40px;
+}
+
+/* Song Container - Flexbox for layout */
+.song-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4faff;
+    padding: 20px;
+    margin-bottom: 30px; /* Add space between containers */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Container for the items (adjusted for mobile and desktop) */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 20px; /* Adjust the gap between items */
+    margin-top: 20px; /* Optional, add spacing above the grid */
+}
+
+/* Hover effect for song containers */
+.song-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* GIF Styling */
+.song-gif img {
+    width: 150px;  /* Adjust width as needed */
+    height: auto;
+    border-radius: 8px;  /* Optional rounded corners for gif */
+}
+
+/* Song Details Styling */
+.song-details {
+    text-align: left;
+    padding-left: 20px; /* Space between gif and text */
+}
+
+.song-details h3 {
+    font-size: 1.5rem;
+    color: #3a79a4;
+    margin-bottom: 10px;
+}
+
+.controls {
+    margin-bottom: 15px;
+}
+
+.controls .play-pause {
+    background-color: #3a79a4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls .play-pause:hover {
+    background-color: #2b5d77; /* Darker shade on hover */
+}
+
+.song-details p {
+    font-size: 1.2rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Mobile View - Stack the containers vertically */
 @media (max-width: 768px) {
     .navbar .nav-links {
         display: none;
@@ -148,23 +237,63 @@ section p {
     section p {
         font-size: 1rem;
     }
+
+    /* Mobile Song Container */
+    .song-container {
+        flex-direction: column;  /* Stack vertically */
+        align-items: center;
+    }
+
+    .song-gif img {
+        width: 120px;  /* Adjust gif size for mobile */
+    }
+
+    .song-details {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .song-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .song-details p {
+        font-size: 1rem;
+    }
+
+    .controls .play-pause {
+        font-size: 1rem;
+    }
+
+    /* Adjust grid layout for mobile view */
+    .container {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
 }
 
-/* Larger Section Container Padding for Wide Screens */
+/* Desktop View - 3 Containers Per Row */
 @media (min-width: 1024px) {
-    .section-container {
-        padding: 80px 30px;
+    /* Adjust grid layout for larger screens (laptops and desktops) */
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
     }
 
-    h1 {
-        font-size: 4rem;
+    /* Remove margin-right for the last item */
+    .song-container:nth-child(3n) {
+        margin-right: 0;
     }
 
-    h2 {
-        font-size: 2.5rem;
+    /* Adjust the gif size for large screens */
+    .song-gif img {
+        width: 180px; /* Slightly larger gif on desktop */
     }
 
-    section p {
-        font-size: 1.4rem;
+    /* Adjust song details for large screens */
+    .song-details h3 {
+        font-size: 1.8rem;
+    }
+
+    .song-details p {
+        font-size: 1.2rem;
     }
 }

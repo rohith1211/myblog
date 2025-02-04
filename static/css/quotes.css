@@ -60,10 +60,10 @@ body {
     cursor: pointer;
 }
 
-/* Section Styles */
+/* Section Container Styles */
 .section-container {
     padding: 60px 20px;
-    margin: 50px 0;
+    margin: 50px 0 30px 0;  /* Added margin-bottom for space between sections */
     background: #ffffff;  /* Clean white background */
     border-radius: 15px;
     max-width: 900px;
@@ -72,7 +72,6 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
 }
-
 .section-container:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -114,6 +113,57 @@ section p {
     transform: translateY(-20px);
 }
 
+/* Quotes Section Styles */
+#quotes {
+    background: #ffffff; /* Clean white background for quotes section */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 50px; /* Add some space above the quotes section */
+}
+
+#quotes h1 {
+    font-size: 3.5rem;
+    color: #3a79a4;  /* Deep blue */
+    margin-bottom: 20px;
+}
+
+#quotes p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #777777; /* Softer gray text for better readability */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/* Quote Container Styles */
+.quote-container {
+    margin-bottom: 50px; /* Reduced margin to create smaller gap between quote containers */
+    background-color: #f4faff; /* Very light blue background */
+    padding: 30px;
+    max-width: 900px; /* Limit the width for large screens */
+    margin: 0 auto; /* Center the container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: 0.3s ease;
+}
+.quote-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+.quote-container h2 {
+    font-size: 2rem;
+    color: #3a79a4; /* Deep blue */
+    margin-bottom: 15px;
+}
+
+.quote-container p {
+    font-size: 1.2rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
 /* Mobile Styling */
 @media (max-width: 768px) {
     .navbar .nav-links {
@@ -148,6 +198,19 @@ section p {
     section p {
         font-size: 1rem;
     }
+
+    /* Quote Container Adjustments for Smaller Screens */
+    .quote-container {
+        padding: 20px;
+    }
+
+    .quote-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .quote-container p {
+        font-size: 1rem;
+    }
 }
 
 /* Larger Section Container Padding for Wide Screens */
@@ -166,5 +229,18 @@ section p {
 
     section p {
         font-size: 1.4rem;
+    }
+
+    /* Quote Container Adjustments for Larger Screens */
+    .quote-container {
+        padding: 40px;
+    }
+
+    .quote-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .quote-container p {
+        font-size: 1.3rem;
     }
 }
